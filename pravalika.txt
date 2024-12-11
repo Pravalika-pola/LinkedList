@@ -1,0 +1,51 @@
+class SinglyLinkedListNode{
+    int data;
+    SinglyLinkedlistNode next;
+    SinglyLinkedListNode(int data){
+        this.data=data;
+        this.next=null;
+    }
+}
+public class Solution{
+    reversePrint(SinglyLinkedlistNode head){
+        stack<integer>stack=new Stack<>();
+    SinglyLinkedlistNode current=head;
+    while(current!=null){
+        stack.push(current.data);
+        current=current.next;
+    }
+    while(!stack.isEmpty()){
+        System.out.println(stack.pop());
+    }
+}
+public static SinglyLinkedlistNode insertNode(SinglyLinkedlistNode head,int data)
+{
+    SinglyLinkedListNodenode=new SinglyLinkedlistNode(data);
+    if(head==null){
+        return node;
+    }
+    else 
+    {
+        SinglyLinkedlistNode cureent = head;
+        while(current.next!=null){
+            current=current.next;
+        }
+        current.next=node;
+        return head;
+    }
+    public static void main(String[] args)
+    {
+        Scanner scanner=new Scanner(System.in);
+        int t=scanner.nextInt();
+        while(t-->0){
+            int n=scanner.nextInt();
+            singlyLinkedlistNode head = null;
+            for(int i=0;i<n;i++)
+            {
+                int data=scanner.nextInt();
+                head=insertNode(head,data);
+            }recersePrint(head);
+        }
+        scanner.close();
+    }
+}
